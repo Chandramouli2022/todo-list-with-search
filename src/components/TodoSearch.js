@@ -23,7 +23,7 @@ function TodoSearch({ todos, handleSearch }) {
       </button>
 
       {todos
-        .filter((item) => item.text.toLowerCase().includes(query))
+        .filter((item) => item.text.toLowerCase().includes(query.toLowerCase()))
         .map((todo) => (
           <div
             className={todo.isComplete ? "todo-row complete" : "todo-row"}
